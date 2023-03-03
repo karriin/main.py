@@ -1,0 +1,25 @@
+# import important module
+import datetime
+from datetime import datetime
+ 
+# Create datetime string
+str_dob = input("What is your date of birth? Please write as DD/MM/YYYY: ")
+print("datetime string : {}".format(str_dob))
+ 
+# call datetime.strptime to convert it into datetime datatype
+obj_dob = datetime.strptime(str_dob, "%d/%m/%Y")
+ 
+# It will print the datetime object
+print(obj_dob)
+ 
+# extract the time from obj_dob
+date = obj_dob.date()
+print(date)
+
+#Create today's date
+today = date.today()
+print("Today's date: ", today, ".  We can proceed with the calculation")
+
+# difference between dates in timedelta
+delta = today - date
+print(f'You are {delta.days} days old')
